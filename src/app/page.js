@@ -26,7 +26,7 @@ export default function Home() {
       <br></br>
       <Cards></Cards>
       <br></br>
-      <Ticket></Ticket>
+      {/* <Ticket></Ticket> */}
       <br></br>
       <Contests></Contests>
       <br></br>
