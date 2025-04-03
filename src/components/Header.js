@@ -64,8 +64,8 @@ export default function Header() {
           <Link href="/" className={`${isScrolled ? 'text-black' : 'text-white'} hover:text-opacity-80 transition-colors font-medium text-center`}>
             Home
           </Link>
-          <Link href="/menu" className={`${isScrolled ? 'text-black' : 'text-white'} hover:text-opacity-80 transition-colors font-medium text-center`}>
-            Menu
+          <Link href="/foods" className={`${isScrolled ? 'text-black' : 'text-white'} hover:text-opacity-80 transition-colors font-medium text-center`}>
+            Foods
           </Link>
           <Link href="/about" className={`${isScrolled ? 'text-black' : 'text-white'} hover:text-opacity-80 transition-colors font-medium text-center`}>
             About
@@ -121,11 +121,11 @@ export default function Header() {
               Home
             </Link>
             <Link 
-              href="/menu" 
+              href="/foods" 
               className="text-white hover:text-white/80 transition-colors py-2 px-4 rounded-md hover:bg-foreground/5"
               onClick={() => setIsMenuOpen(false)}
             >
-              Menu
+              Foods
             </Link>
             <Link 
               href="/about" 
