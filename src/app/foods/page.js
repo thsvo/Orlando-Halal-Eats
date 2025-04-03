@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Footer from '@/components/Footer';
 import MapView from '@/components/MapView';
 import Header from '@/components/Header';
+import Link from 'next/link';
 
 export default function SponsorsPage() {
     return (
@@ -28,7 +29,7 @@ export default function SponsorsPage() {
                     <div className="bg-white rounded-xl p-6 shadow-md mb-8 flex justify-center items-center">
                         <div className="flex items-center space-x-4">
                             <div className="text-center">
-                                <a href='/'>
+                                <Link href='/'>
                                     <Image
                                         src="Masjid.svg"
                                         alt="Orlando Halal Eats"
@@ -36,12 +37,12 @@ export default function SponsorsPage() {
                                         height={150}
                                         className="mx-auto"
                                     />
-                                </a>
+                                </Link>
                                 <p className="text-xs font-semibold mt-1">FOOD FESTIVAL</p>
                             </div>
                             <div className="h-16 w-px bg-amber-500 mx-4"></div>
                             <div>
-                                <a href='/'>
+                                <Link href='/'>
                                     <Image
                                         src="https://cdn.codeopx.com/halal.png"
                                         alt="Masjid"
@@ -49,7 +50,7 @@ export default function SponsorsPage() {
                                         height={80}
                                         className="mx-auto"
                                     />
-                                </a>
+                                </Link>
 
                             </div>
                         </div>
