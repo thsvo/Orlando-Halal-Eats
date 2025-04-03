@@ -146,7 +146,8 @@ const Footer = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="border-t border-white/20 mt-8 pt-8 text-center"
         >
-          <p>© {new Date().getFullYear()} Lalal Food. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Orlando Halal Eats
+          . All rights reserved.</p>
         </motion.div>
       </div>
     </footer>
