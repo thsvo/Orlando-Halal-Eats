@@ -2,6 +2,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import Image from 'next/image';
 
 const Contests = () => {
   const contestImages = [
@@ -27,10 +28,12 @@ const Contests = () => {
               <Card className="overflow-hidden border-0 shadow-lg h-full">
                 <CardContent className="p-0">
                   <div className="relative h-64 w-full">
-                    <img 
+                    <Image 
                       src={image} 
                       alt={`Contest ${index + 1}`} 
-                      className="h-full w-full object-cover"
+                      width={500} 
+                      height={300}
+                      className="object-cover w-full h-full"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                       <p className="text-white font-medium">Contest {index + 1}</p>

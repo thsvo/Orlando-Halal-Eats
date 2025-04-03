@@ -44,7 +44,7 @@ export default function SponsorsPage() {
                             <div>
                                 <Link href='/'>
                                     <Image
-                                        src="https://cdn.codeopx.com/halal.png"
+                                        src="Halal.PNG"
                                         alt="Masjid"
                                         width={150}
                                         height={80}

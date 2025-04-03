@@ -1,15 +1,18 @@
 "use client";
 import React from 'react';
+import Image from 'next/image';
 
 const Celebrate = () => {
   return (
     <div className="flex justify-center items-center w-full">
       <section className="flex max-w-7xl mx-auto my-8 bg-white shadow-md rounded-lg overflow-hidden md:flex-row flex-col md:m-8 m-4">
         <div className="flex-1 min-h-[400px] md:min-h-[400px] min-h-[300px]">
-          <img 
+          <Image 
             src="/babypic.jpg" 
             alt="Child jumping in a bounce house"
             className="w-full h-full object-cover"
+            width={800}
+            height={600}
           />
         </div>
         <div className="flex-1 p-10 flex flex-col justify-center md:p-10 p-6">

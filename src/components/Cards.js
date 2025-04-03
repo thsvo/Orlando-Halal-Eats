@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 const Cards = () => {
   const [isHovering, setIsHovering] = useState(null);
@@ -67,10 +68,13 @@ const Cards = () => {
               onMouseMove={(e) => handleMouseMove(e, card.id)}
               onMouseLeave={handleMouseLeave}
             >
-              <img
-                src={card.image}
-                alt={card.title}
-                className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+              {/* Using Next.js Image component for better performance */}
+              <Image 
+                src={`/${card.image}`}
+                alt={`${card.title} image`}
+                width={500}
+                height={300}
+                className="w-full h-full object-cover"
               />
             </div>
             <h2 className="text-black text-3xl font-bold my-3">{card.title}</h2>

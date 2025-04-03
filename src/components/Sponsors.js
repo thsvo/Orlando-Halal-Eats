@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
+import Image from "next/image";
 
 const Sponsors = () => {
   const sponsors = [
@@ -49,9 +50,11 @@ const Sponsors = () => {
               key={index} 
               className="p-4 flex items-center justify-center hover:shadow-md transition-shadow duration-300 bg-white border-0"
             >
-              <img 
+              <Image 
                 src={sponsor.logo} 
                 alt={sponsor.name} 
+                width={100}
+                height={80}
                 className="max-h-16 md:max-h-20 w-auto object-contain" 
               />
             </Card>
@@ -62,10 +65,13 @@ const Sponsors = () => {
         <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 opacity-60">
           {sponsors.slice(0, 10).map((sponsor, index) => (
             <div key={index} className="flex items-center justify-center">
-              <img 
-                src={sponsor.logo} 
-                alt={sponsor.name} 
-                className="max-h-12 w-auto object-contain" 
+              {/* Using Next.js Image component for better performance */}
+              <Image 
+                src={sponsor.logo}
+                alt={`${sponsor.name} logo`}
+                width={200} 
+                height={100}
+                className="max-h-12 w-auto object-contain"
               />
             </div>
           ))}
