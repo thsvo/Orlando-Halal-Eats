@@ -96,13 +96,13 @@ export default function Hero() {
         allowFullScreen
       />
       <Overlay />
-      <HeroContent>
+      <HeroContent sx={{ paddingTop: isMobile ? '30rem' : '0' }}>
         <Container maxWidth="md">
           <HeroTitle variant={isMobile ? "h3" : "h1"}>
             Eat. Play. Laugh.
           </HeroTitle>
           <HeroSubtitle variant={isMobile ? "body1" : "h5"}>
-            Experience the finest halal cuisine and cultural celebration
+          We can't wait to celebrate with you—join us for a day of great food, exciting entertainment, and unforgettable memories!
           </HeroSubtitle>
           <HeroButton variant="contained" color="primary" size="large">
             Explore Menu

@@ -49,7 +49,7 @@ export default function Header() {
         {/* Logo - Centered on mobile */}
         <Link href="/" className="flex items-center md:absolute md:left-4">
           <Image
-            src="https://cdn.codeopx.com/halal.png"
+            src="Masjid.svg"
             alt="Lalal Food Logo"
             width={100}
             height={24}
@@ -86,9 +86,9 @@ export default function Header() {
             <div className="flex items-center justify-between">
               <Link href="/" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
                 <Image
-                  src="/vercel.svg"
+                  src="/Masjid.svg"
                   alt="Lalal Food Logo"
-                  width={80}
+                  width={50}
                   height={20}
                   className="dark:invert"
                   priority
