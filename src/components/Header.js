@@ -23,7 +23,7 @@ export default function Header() {
   };
 
   return (
-    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'}`}>
+    <header className={` top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'}`}>
       <div className="pt-8 pb-8 container mx-auto px-4 py-3 flex items-center justify-between md:justify-center">
         {/* Mobile Menu Button (Left) */}
         <button 

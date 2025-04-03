@@ -83,7 +83,7 @@ export default function Hero() {
   return (
     <Box sx={{ position: 'relative', overflow: 'hidden', height: '100vh' }}>
       <YouTubeBackground
-        src="https://www.youtube.com/embed/5l8un9FhYVM?autoplay=1&controls=0&loop=1&playlist=5l8un9FhYVM&showinfo=0&rel=0&enablejsapi=1"
+        src="https://www.youtube.com/embed/5l8un9FhYVM?autoplay=1&mute=1&controls=0&loop=1&playlist=5l8un9FhYVM&showinfo=0&rel=0&enablejsapi=1"
         title="Food Festival Video"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen

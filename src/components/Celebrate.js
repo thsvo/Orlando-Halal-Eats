@@ -1,149 +1,93 @@
 "use client";
 import React from 'react';
-import { Box, Typography, Container, Grid, Paper } from '@mui/material';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import EventIcon from '@mui/icons-material/Event';
+import styled from 'styled-components';
+
+const CelebrateContainer = styled.section`
+  display: flex;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin: 1rem;
+  }
+`;
+
+const ImageContainer = styled.div`
+  flex: 1;
+  min-height: 400px;
+  
+  @media (max-width: 768px) {
+    min-height: 300px;
+  }
+`;
+
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
+const ContentContainer = styled.div`
+  flex: 1;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+`;
+
+const Title = styled.h2`
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #000;
+  font-weight: 700;
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+`;
+
+const Description = styled.p`
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1.5rem;
+`;
 
 const Celebrate = () => {
   return (
-    <Container maxWidth="xl" sx={{ py: 8 }}>
-      <Grid container spacing={4}>
-        {/* Event Details Section */}
-        <Grid item xs={12}>
-          <Box 
-            sx={{ 
-              display: 'flex', 
-              justifyContent: 'space-around', 
-              flexWrap: 'wrap',
-              mb: 6
-            }}
-          >
-            {/* When */}
-            <Box sx={{ textAlign: 'center', px: 2 }}>
-              <Box 
-                sx={{ 
-                  backgroundColor: '#FFDE59', 
-                  borderRadius: '50%', 
-                  width: 60, 
-                  height: 60, 
-                  display: 'flex', 
-                  justifyContent: 'center', 
-                  alignItems: 'center',
-                  margin: '0 auto',
-                  mb: 1
-                }}
-              >
-                <EventIcon sx={{ fontSize: 30, color: '#0066c2' }} />
-              </Box>
-              <Typography variant="h6" fontWeight="bold" gutterBottom>
-                When
-              </Typography>
-              <Typography variant="body1">
-                November 23, 2024
-              </Typography>
-            </Box>
-
-            {/* Where */}
-            <Box sx={{ textAlign: 'center', px: 2 }}>
-              <Box 
-                sx={{ 
-                  backgroundColor: '#FFDE59', 
-                  borderRadius: '50%', 
-                  width: 60, 
-                  height: 60, 
-                  display: 'flex', 
-                  justifyContent: 'center', 
-                  alignItems: 'center',
-                  margin: '0 auto',
-                  mb: 1
-                }}
-              >
-                <LocationOnIcon sx={{ fontSize: 30, color: '#0066c2' }} />
-              </Box>
-              <Typography variant="h6" fontWeight="bold" gutterBottom>
-                Where
-              </Typography>
-              <Typography variant="body1">
-                Miramar Regional Park
-              </Typography>
-            </Box>
-
-            {/* Time */}
-            <Box sx={{ textAlign: 'center', px: 2 }}>
-              <Box 
-                sx={{ 
-                  backgroundColor: '#FFDE59', 
-                  borderRadius: '50%', 
-                  width: 60, 
-                  height: 60, 
-                  display: 'flex', 
-                  justifyContent: 'center', 
-                  alignItems: 'center',
-                  margin: '0 auto',
-                  mb: 1
-                }}
-              >
-                <AccessTimeIcon sx={{ fontSize: 30, color: '#0066c2' }} />
-              </Box>
-              <Typography variant="h6" fontWeight="bold" gutterBottom>
-                Time
-              </Typography>
-              <Typography variant="body1">
-                12 PM
-              </Typography>
-            </Box>
-          </Box>
-        </Grid>
-
-        {/* Main Content Section */}
-        <Grid item xs={12} md={6}>
-          <Box 
-            component="img"
-            src="/images/celebrate.jpg"
-            alt="Happy child at festival"
-            sx={{
-              width: '100%',
-              height: 'auto',
-              borderRadius: 2,
-              boxShadow: 3,
-              maxHeight: 400,
-              objectFit: 'cover'
-            }}
-          />
-        </Grid>
-        
-        <Grid item xs={12} md={6}>
-          <Box sx={{ pl: { md: 4 }, pt: { xs: 2, md: 0 } }}>
-            <Typography 
-              variant="h3" 
-              component="h2" 
-              gutterBottom 
-              sx={{ 
-                fontWeight: 'bold',
-                color: '#0066c2'
-              }}
-            >
-              Celebrate Culture & Flavor
-            </Typography>
-            <Typography variant="body1" paragraph>
-              The South Florida Halal Fest is a vibrant celebration of the rich tapestry of 
-              culinary traditions, artistic expression, and cultural diversity that defines our 
-              region. Throughout the event, guests will delight in a wide array of 
-              mouthwatering dishes from local restaurants, food trucks, and specialty vendors, 
-              each showcasing the unique flavors of various ethnic cuisines.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              Experience captivating performances by artists from around the globe and explore a variety 
-              of vendor stalls celebrating cultures from every corner of the world. Join us for a 
-              day of exceptional food, dynamic entertainment, shopping, and cultural 
-              exploration. Eat, play, and laugh as you immerse yourself in the excitement and 
-              joy of our community. Follow us on our Social Media to stay tuned with updates.
-            </Typography>
-          </Box>
-        </Grid>
-      </Grid>
-    </Container>
+    <CelebrateContainer>
+      <ImageContainer>
+        <Image 
+          src="/babypic.jpg" 
+          alt="Child jumping in a bounce house"
+        />
+      </ImageContainer>
+      <ContentContainer>
+        <Title>Celebrate Culture & Flavor</Title>
+        <Description>
+          The South Florida Halal Fest is a vibrant celebration of the rich tapestry of 
+          culinary traditions, artistic expression, and cultural diversity that defines our 
+          region. Throughout the event, guests will delight in a wide array of 
+          mouthwatering dishes from local restaurants, food trucks, and specialty vendors, 
+          each showcasing the unique flavors of various ethnic cuisines. Experience 
+          captivating performances by artists from around the globe and explore a variety 
+          of vendor stalls celebrating cultures from every corner of the world. Join us for a 
+          day of exceptional food, dynamic entertainment, shopping, and cultural 
+          exploration. Eat, play, and laugh as you immerse yourself in the excitement and 
+          joy of our community. Follow us on our Social Media to stay tuned with updates.
+        </Description>
+      </ContentContainer>
+    </CelebrateContainer>
   );
 };
 
