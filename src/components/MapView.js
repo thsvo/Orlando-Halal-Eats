@@ -11,8 +11,8 @@ const MapView = () => {
 
   // Coordinates for 786 Myrtle St, Sanford, FL 32773
   const center = {
-    lat: 28.8113675, // Latitude for the address
-    lng: -81.2683292 // Longitude for the address
+    lat: 28.7361658, 
+    lng: -81.2762179 
   };
 
   // Options for the map, including satellite view

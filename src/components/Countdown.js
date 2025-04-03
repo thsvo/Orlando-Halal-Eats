@@ -15,7 +15,7 @@ const Countdown = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    const targetDate = new Date('April 6, 2025').getTime();
+    const targetDate = new Date('April 5, 2025 14:00:00 EST').getTime();
 
     const calculateTimeLeft = () => {
       const now = new Date().getTime();

@@ -25,7 +25,7 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             className="space-y-4"
           >
-            <h3 className="text-xl font-bold">Lalal Food</h3>
+            <h3 className="text-xl font-bold">Orlando Halal Eats            </h3>
             <p className="text-gray-200">
               Delicious food delivered to your doorstep. We provide the best
               culinary experience with fresh ingredients and expert chefs.
@@ -104,7 +104,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <FaEnvelope className="text-blue-300" />
-                <span>info@lalalfood.com</span>
+                <span>info@Halalalfood.com</span>
               </li>
             </ul>
           </motion.div>
