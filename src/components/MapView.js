@@ -26,7 +26,7 @@ const MapView = () => {
 
   return (
     <div className="map-container">
-      <LoadScript googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY">
+      <LoadScript googleMapsApiKey="AIzaSyCihLNR2cBYVJYCrfl2eso5rHXCAMpmBCo">
         <GoogleMap
           mapContainerStyle={containerStyle}
           center={center}

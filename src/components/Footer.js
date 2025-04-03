@@ -132,6 +132,11 @@ const Footer = () => {
                 Subscribe
               </Button>
             </div>
+            <div className="mt-4">
+              <p className="text-gray-200">
+                Visit us at: <a href="https://www.google.com/maps?q=786+Myrtle+St,+Sanford,+FL+32773" target="_blank" className="hover:text-blue-300">786 Myrtle St, Sanford, FL 32773</a>
+              </p>
+            </div>
           </motion.div>
         </div>
 

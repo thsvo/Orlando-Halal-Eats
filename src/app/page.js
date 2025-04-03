@@ -32,7 +32,7 @@ export default function Home() {
       <br></br>
       <Sponsors></Sponsors>
       <br></br>
-      {/* <MapView></MapView> */}
+      <MapView></MapView>
       <br></br>
       <Footer></Footer>
     </div>

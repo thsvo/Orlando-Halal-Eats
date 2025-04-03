@@ -156,9 +156,25 @@ const Countdown = () => {
           justifyContent: 'center',
           minHeight: '60vh',
           padding: '40px 0',
-          backgroundColor: '#0066c2', // Changed from '#1a2f5c' to '#0066c2'
+          // Removing the backgroundColor: '#0066c2' line
           borderRadius: '16px',
           width: '100%',
+          backgroundImage: 'url("/Banner.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          position: 'relative',
+          '&::before': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 102, 194, 0.85)', // You may want to adjust this opacity
+            borderRadius: '16px',
+            zIndex: 0,
+          },
         }}
       >
         <Box
@@ -169,6 +185,8 @@ const Countdown = () => {
             gap: '10px',
             marginBottom: '30px',
             width: '100%',
+            position: 'relative',
+            zIndex: 1, // Ensure content appears above the overlay
           }}
         >
           {timeUnit(timeLeft.days, 'days', '#e63946', '#e63946')}
@@ -185,6 +203,8 @@ const Countdown = () => {
             textTransform: 'uppercase',
             letterSpacing: '2px',
             marginTop: '20px',
+            position: 'relative',
+            zIndex: 1, // Ensure text appears above the overlay
           }}
         >
           Countdown to April 6, 2025

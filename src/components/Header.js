@@ -23,8 +23,8 @@ export default function Header() {
   };
 
   return (
-    <header className={` top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'}`}>
-      <div className="pt-8 pb-8 container mx-auto px-4 py-3 flex items-center justify-between md:justify-center">
+    <header className={`fixed top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'}`}>
+      <div className="pt-4 pb-4 container mx-auto px-4 lg:px-10 flex items-center justify-between">
         {/* Mobile Menu Button (Left) */}
         <button 
           className="md:hidden flex items-center p-2 rounded-md hover:bg-foreground/5"
@@ -47,7 +47,7 @@ export default function Header() {
         </button>
 
         {/* Logo - Centered on mobile */}
-        {/* <Link href="/" className="flex items-center md:absolute md:left-4">
+        <Link href="/" className="flex items-center md:absolute md:left-4">
           <Image
             src="https://cdn.codeopx.com/halal.png"
             alt="Lalal Food Logo"
@@ -56,21 +56,21 @@ export default function Header() {
             className="dark:invert"
             priority
           />
-          <span className="ml-2 text-xl font-bold hidden sm:inline">Lalal Food</span>
-        </Link> */}
+          {/* <span className="ml-2 text-xl font-bold hidden sm:inline">Lalal Food</span> */}
+        </Link>
 
-        {/* Desktop Navigation - Centered */}
-        <nav className="hidden md:flex items-center space-x-8">
-          <Link href="/" className="text-foreground hover:text-foreground/80 transition-colors font-medium">
+        {/* Desktop Navigation - Right Aligned */}
+        <nav className="hidden md:flex items-center space-x-8 ml-auto">
+          <Link href="/" className={`${isScrolled ? 'text-black' : 'text-white'} hover:text-opacity-80 transition-colors font-medium text-center`}>
             Home
           </Link>
-          <Link href="/menu" className="text-foreground hover:text-foreground/80 transition-colors font-medium">
+          <Link href="/menu" className={`${isScrolled ? 'text-black' : 'text-white'} hover:text-opacity-80 transition-colors font-medium text-center`}>
             Menu
           </Link>
-          <Link href="/about" className="text-foreground hover:text-foreground/80 transition-colors font-medium">
+          <Link href="/about" className={`${isScrolled ? 'text-black' : 'text-white'} hover:text-opacity-80 transition-colors font-medium text-center`}>
             About
           </Link>
-          <Link href="/contact" className="text-foreground hover:text-foreground/80 transition-colors font-medium">
+          <Link href="/contact" className={`${isScrolled ? 'text-black' : 'text-white'} hover:text-opacity-80 transition-colors font-medium text-center`}>
             Contact
           </Link>
         </nav>
@@ -115,28 +115,28 @@ export default function Header() {
           <nav className="flex flex-col p-4 space-y-4">
             <Link 
               href="/" 
-              className="text-foreground hover:text-foreground/80 transition-colors py-2 px-4 rounded-md hover:bg-foreground/5"
+              className="text-white hover:text-white/80 transition-colors py-2 px-4 rounded-md hover:bg-foreground/5"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link 
               href="/menu" 
-              className="text-foreground hover:text-foreground/80 transition-colors py-2 px-4 rounded-md hover:bg-foreground/5"
+              className="text-white hover:text-white/80 transition-colors py-2 px-4 rounded-md hover:bg-foreground/5"
               onClick={() => setIsMenuOpen(false)}
             >
               Menu
             </Link>
             <Link 
               href="/about" 
-              className="text-foreground hover:text-foreground/80 transition-colors py-2 px-4 rounded-md hover:bg-foreground/5"
+              className="text-white hover:text-white/80 transition-colors py-2 px-4 rounded-md hover:bg-foreground/5"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </Link>
             <Link 
               href="/contact" 
-              className="text-foreground hover:text-foreground/80 transition-colors py-2 px-4 rounded-md hover:bg-foreground/5"
+              className="text-white hover:text-white/80 transition-colors py-2 px-4 rounded-md hover:bg-foreground/5"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
