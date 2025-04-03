@@ -3,6 +3,7 @@ import React from 'react';
 import { Box, Typography, Button, Container } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { keyframes } from '@mui/system';
+import { useMediaQuery } from '@mui/material';
 
 // Define animations
 const fadeIn = keyframes`
@@ -80,9 +81,15 @@ const YouTubeBackground = styled('iframe')({
 });
 
 export default function Hero() {
+  const isMobile = useMediaQuery('(max-width:600px)');
+
   return (
     <Box sx={{ position: 'relative', overflow: 'hidden', height: '100vh' }}>
       <YouTubeBackground
+        sx={{
+          top: isMobile ? '0' : '-60px',
+          height: isMobile ? '100%' : 'calc(100% + 120px)',
+        }}
         src="https://www.youtube.com/embed/5l8un9FhYVM?autoplay=1&mute=1&controls=0&loop=1&playlist=5l8un9FhYVM&showinfo=0&rel=0&enablejsapi=1"
         title="Food Festival Video"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -91,10 +98,10 @@ export default function Hero() {
       <Overlay />
       <HeroContent>
         <Container maxWidth="md">
-          <HeroTitle variant="h1">
+          <HeroTitle variant={isMobile ? "h3" : "h1"}>
             Eat. Play. Laugh.
           </HeroTitle>
-          <HeroSubtitle variant="h5">
+          <HeroSubtitle variant={isMobile ? "body1" : "h5"}>
             Experience the finest halal cuisine and cultural celebration
           </HeroSubtitle>
           <HeroButton variant="contained" color="primary" size="large">
