@@ -156,7 +156,7 @@ const Countdown = () => {
           justifyContent: 'center',
           minHeight: '60vh',
           padding: '40px 0',
-          backgroundColor: '#1a2f5c',
+          backgroundColor: '#0066c2', // Changed from '#1a2f5c' to '#0066c2'
           borderRadius: '16px',
           width: '100%',
         }}

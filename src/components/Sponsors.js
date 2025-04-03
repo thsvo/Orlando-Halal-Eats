@@ -4,17 +4,17 @@ import { Card } from "@/components/ui/card";
 const Sponsors = () => {
   const sponsors = [
     { name: "LaserLab", logo: "/10.png" },
-    { name: "Hemani", logo: "/images/sponsors/hemani.png" },
-    { name: "Alpha Equity", logo: "/images/sponsors/alpha-equity.png" },
-    { name: "Pardesi", logo: "/images/sponsors/pardesi.png" },
-    { name: "Chick Spot", logo: "/images/sponsors/chick-spot.png" },
-    { name: "Scent Sense", logo: "/images/sponsors/scent-sense.png" },
-    { name: "Dr. Herbalist", logo: "/images/sponsors/dr-herbalist.png" },
-    { name: "Wise Academy", logo: "/images/sponsors/wise-academy.png" },
-    { name: "Tacos", logo: "/images/sponsors/tacos.png" },
-    { name: "It Worth More", logo: "/images/sponsors/it-worth-more.png" },
-    { name: "Jungle Safaris", logo: "/images/sponsors/jungle-safaris.png" },
-    { name: "BMG", logo: "/images/sponsors/bmg.png" },
+    { name: "Hemani", logo: "/11.png" },
+    { name: "Alpha Equity", logo: "/12.png" },
+    { name: "Pardesi", logo: "13.png" },
+    { name: "Chick Spot", logo: "/14.png" },
+    { name: "Scent Sense", logo: "/15.png" },
+    { name: "Dr. Herbalist", logo: "/16.png" },
+    { name: "Wise Academy", logo: "/17.png" },
+    { name: "Tacos", logo: "/18.png" },
+    { name: "It Worth More", logo: "/19.png" },
+    { name: "Jungle Safaris", logo: "/20.png" },
+    { name: "BMG", logo: "/21.png" },
   ];
 
   return (

@@ -2,8 +2,10 @@ import Cards from "@/components/Cards";
 import Celebrate from "@/components/Celebrate";
 import Contests from "@/components/Contests";
 import Countdown from "@/components/Countdown";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import MapView from "@/components/MapView";
 import PageSection from "@/components/PageSection";
 import Sponsors from "@/components/Sponsors";
 import Ticket from "@/components/Ticket";
@@ -29,7 +31,10 @@ export default function Home() {
       <Contests></Contests>
       <br></br>
       <Sponsors></Sponsors>
-
+      <br></br>
+      {/* <MapView></MapView> */}
+      <br></br>
+      <Footer></Footer>
     </div>
   );
 }
