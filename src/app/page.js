@@ -2,6 +2,7 @@ import Cards from "@/components/Cards";
 import Celebrate from "@/components/Celebrate";
 import Contests from "@/components/Contests";
 import Countdown from "@/components/Countdown";
+import Cover from "@/components/Cover";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -15,8 +16,8 @@ export default function Home() {
   return (
     <div>
       <Header></Header>
-
-      <Hero></Hero>
+      <Cover></Cover>
+      {/* <Hero></Hero> */}
       <br></br>
       <Countdown></Countdown>
       <br></br>

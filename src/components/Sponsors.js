@@ -7,7 +7,7 @@ const Sponsors = () => {
     { name: "LaserLab", logo: "/10.png" },
     { name: "Hemani", logo: "/11.png" },
     { name: "Alpha Equity", logo: "/12.png" },
-    { name: "Pardesi", logo: "13.png" },
+    { name: "Pardesi", logo: "/13.png" }, // This path was missing the leading slash
     { name: "Chick Spot", logo: "/14.png" },
     { name: "Scent Sense", logo: "/15.png" },
     { name: "Dr. Herbalist", logo: "/16.png" },
