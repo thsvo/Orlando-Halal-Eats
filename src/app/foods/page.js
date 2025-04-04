@@ -10,7 +10,7 @@ export default function SponsorsPage() {
     return (
         <div>
             <Header />
-            <div className="min-h-screen bg-blue-50 p-6 relative overflow-hidden">
+            <div className=" bg-blue-50 p-6 relative overflow-hidden">
                 {/* Decorative elements */}
                 <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
                     <div className="absolute top-10 left-10">
@@ -21,7 +21,7 @@ export default function SponsorsPage() {
                     </div>
                     {/* More decorative elements would be placed here */}
                 </div>
-                <main className="flex-grow relative h-[350px] sm:h-[350px] md:h-[450px] lg:h-[550px] bg-[#eef0f4]">
+                <main className="flex-grow relative h-[350px] sm:h-[250px] md:h-[450px] lg:h-[550px] bg-[#eef0f4]">
                     <div className="absolute inset-0 w-full h-full">
                         <Image
                             src="/food.jpeg"
