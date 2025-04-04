@@ -6,7 +6,7 @@ const Cover = () => {
     <Box
       sx={{
         position: 'relative',
-        height: '100vh',
+        height: { xs: '200px', md: '100vh' },
         width: '100%',
         backgroundImage: 'url(/cover.png)',
         backgroundSize: 'cover',
@@ -32,8 +32,8 @@ const Cover = () => {
             component="h1" 
             sx={{ 
               fontWeight: 700, 
-              fontSize: { xs: '3rem', md: '4.5rem' },
-              mb: 2,
+              fontSize: { xs: '1.8rem', sm: '2.5rem', md: '4.5rem' },
+              mb: { xs: 1, md: 2 },
               textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
             }}
           >
@@ -43,11 +43,12 @@ const Cover = () => {
           <Typography 
             variant="h5" 
             sx={{ 
-              mb: 4,
+              mb: { xs: 2, md: 4 },
+              fontSize: { xs: '0.9rem', sm: '1.1rem', md: '1.5rem' },
               textShadow: '1px 1px 3px rgba(0,0,0,0.5)'
             }}
           >
-           We can’t wait to celebrate with you—join us for a day of great food, exciting entertainment, and unforgettable memories!
+           We can't wait to celebrate with you—join us for a day of great food, exciting entertainment, and unforgettable memories!
           </Typography>
           
           <Button 
@@ -57,8 +58,9 @@ const Cover = () => {
               backgroundColor: '#f8d448',
               color: 'black',
               fontWeight: 'bold',
-              px: 4,
-              py: 1.5,
+              px: { xs: 2, md: 4 },
+              py: { xs: 1, md: 1.5 },
+              fontSize: { xs: '0.8rem', md: '1rem' },
               '&:hover': {
                 backgroundColor: '#e6c33c',
               }
