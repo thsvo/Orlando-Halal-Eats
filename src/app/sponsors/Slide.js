@@ -18,8 +18,7 @@ const Slide = () => {
 
             {/* Content Overlay */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:px-8">
-
-                <p className="text-xl md:text-2xl lg:text-3xl text-white max-w-3xl font-medium leading-relaxed">
+                <p className="text-xl md:text-2xl lg:text-3xl text-white max-w-3xl font-medium leading-relaxed bg-black/50 p-4 rounded-lg">
                     With Your Support, We&apos;re Creating a Community Where Everyone Belongs.
                 </p>
             </div>
