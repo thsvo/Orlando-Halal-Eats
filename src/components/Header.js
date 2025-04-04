@@ -114,7 +114,7 @@ export default function Example() {
             Foods
           </Link>
           <Link href="/sponsors" className="text-sm/6 font-semibold text-gray-900">
-          Sponsors
+            Sponsors
           </Link>
           <Link href="#" className="text-sm/6 font-semibold text-gray-900">
             Company
@@ -141,7 +141,7 @@ export default function Example() {
               <span className="sr-only">Your Company</span>
               <Image
                 alt=""
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                src="/Masjid.svg"
                 width={32}
                 height={32}
                 className="h-8 w-auto"
@@ -178,23 +178,24 @@ export default function Example() {
                   </DisclosurePanel>
                 </Disclosure>
                 <a
-                  href="#"
+                  href="/Foods"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
-                  Features
+
+                  Foods
                 </a>
                 <a
-                  href="#"
+                  href="/sponsors"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
-                  Marketplace
+                  Sponsors
                 </a>
-                <a
+                {/* <a
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   Company
-                </a>
+                </a> */}
               </div>
               <div className="py-6">
                 <a
