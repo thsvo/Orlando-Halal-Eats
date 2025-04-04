@@ -1,6 +1,18 @@
+"use client"
 import React from "react";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
+// Import Swiper components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+// Import Material UI components
+import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 
 const Sponsors = () => {
   const sponsors = [
@@ -17,6 +29,19 @@ const Sponsors = () => {
     { name: "Jungle Safaris", logo: "/20.png" },
     { name: "BMG", logo: "/21.png" },
   ];
+
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isTablet = useMediaQuery(theme.breakpoints.down('md'));
+  const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
+
+  // Determine slides per view based on screen size
+  const getSlidesPerView = () => {
+    if (isMobile) return 2;
+    if (isTablet) return 3;
+    if (isDesktop) return 6;
+    return 4;
+  };
 
   return (
     <div className="py-16 px-4 bg-gradient-to-b from-blue-50 to-white relative overflow-hidden">
@@ -43,39 +68,90 @@ const Sponsors = () => {
           <p className="text-[#2E7D32] text-xl">Food Festival 2025</p>
         </div>
 
-        {/* Main sponsor grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
-          {sponsors.map((sponsor, index) => (
-            <Card 
-              key={index} 
-              className="p-4 flex items-center justify-center hover:shadow-md transition-shadow duration-300 bg-white border-0"
-            >
-              <Image 
-                src={sponsor.logo} 
-                alt={sponsor.name} 
-                width={100}
-                height={80}
-                className="max-h-16 md:max-h-20 w-auto object-contain" 
-              />
-            </Card>
-          ))}
-        </div>
+        {/* Main sponsor swiper */}
+        <Box sx={{ position: 'relative', padding: '0 30px' }}>
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={20}
+            slidesPerView={getSlidesPerView()}
+            navigation={{
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            }}
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            className="sponsors-swiper"
+          >
+            {sponsors.map((sponsor, index) => (
+              <SwiperSlide key={index}>
+                <Card className="p-4 flex items-center justify-center hover:shadow-md transition-shadow duration-300 bg-white border-0 h-[120px]">
+                  <Image 
+                    src={sponsor.logo} 
+                    alt={sponsor.name} 
+                    width={100}
+                    height={80}
+                    className="max-h-16 md:max-h-20 w-auto object-contain" 
+                  />
+                </Card>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <Box 
+            className="swiper-button-prev" 
+            sx={{ 
+              position: 'absolute', 
+              left: 0, 
+              top: '50%', 
+              transform: 'translateY(-50%)',
+              zIndex: 10,
+              color: '#D35400',
+              cursor: 'pointer',
+              '&::after': { display: 'none' }
+            }}
+          >
+            <NavigateBeforeIcon fontSize="large" />
+          </Box>
+          <Box 
+            className="swiper-button-next" 
+            sx={{ 
+              position: 'absolute', 
+              right: 0, 
+              top: '50%', 
+              transform: 'translateY(-50%)',
+              zIndex: 10,
+              color: '#D35400',
+              cursor: 'pointer',
+              '&::after': { display: 'none' }
+            }}
+          >
+            <NavigateNextIcon fontSize="large" />
+          </Box>
+        </Box>
 
-        {/* Secondary sponsor grid (for visual effect similar to the image) */}
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 opacity-60">
-          {sponsors.slice(0, 10).map((sponsor, index) => (
-            <div key={index} className="flex items-center justify-center">
-              {/* Using Next.js Image component for better performance */}
-              <Image 
-                src={sponsor.logo}
-                alt={`${sponsor.name} logo`}
-                width={200} 
-                height={100}
-                className="max-h-12 w-auto object-contain"
-              />
-            </div>
-          ))}
-        </div>
+        {/* Secondary sponsor swiper (for visual effect similar to the image) */}
+        <Box sx={{ marginTop: 6, opacity: 0.6 }}>
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={30}
+            slidesPerView={getSlidesPerView()}
+            autoplay={{ delay: 2500, disableOnInteraction: false, reverseDirection: true }}
+            loop={true}
+          >
+            {sponsors.map((sponsor, index) => (
+              <SwiperSlide key={index}>
+                <Box className="flex items-center justify-center">
+                  <Image 
+                    src={sponsor.logo}
+                    alt={`${sponsor.name} logo`}
+                    width={200} 
+                    height={100}
+                    className="max-h-12 w-auto object-contain"
+                  />
+                </Box>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Box>
       </div>
     </div>
   );
