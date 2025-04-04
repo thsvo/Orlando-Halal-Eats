@@ -19,7 +19,7 @@ const Sponsors = () => {
       <h1 className="text-2xl sm:text-3xl md:text-4xl items-center text-center lg:text-5xl font-bold text-black italic my-4 sm:my-6 md:my-8">
         Sponsors
       </h1>
-      <main className="flex-grow relative h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] bg-[#eef0f4]">
+      <main className="flex-grow relative h-[350px] sm:h-[350px] md:h-[450px] lg:h-[550px] bg-[#eef0f4]">
         <div className="absolute inset-0 w-full h-full">
           <Image
             src="/sponsor1.jpeg"

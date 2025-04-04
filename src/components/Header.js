@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import {
   Dialog,
   DialogPanel,
@@ -43,7 +44,7 @@ export default function Example() {
     <header className="bg-white">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
+          <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <Image
               alt=""
@@ -52,7 +53,7 @@ export default function Example() {
               height={40}
               className="h-15 w-auto"
             />
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -109,18 +110,18 @@ export default function Example() {
             </PopoverPanel>
           </Popover>
 
-          <a href="/foods" className="text-sm/6 font-semibold text-gray-900">
+          <Link href="/foods" className="text-sm/6 font-semibold text-gray-900">
             Foods
-          </a>
-          <a href="/sponsors" className="text-sm/6 font-semibold text-gray-900">
+          </Link>
+          <Link href="/sponsors" className="text-sm/6 font-semibold text-gray-900">
           Sponsors
-          </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          </Link>
+          <Link href="#" className="text-sm/6 font-semibold text-gray-900">
             Company
-          </a>
+          </Link>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="/" className="-m-1.5 p-1.5">
+          <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <Image
               alt=""
@@ -129,7 +130,7 @@ export default function Example() {
               height={40}
               className="h-15 w-auto"
             />
-          </a>
+          </Link>
         </div>
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
