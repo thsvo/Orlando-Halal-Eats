@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 const SponsorBe = () => {
     return (
-        <div className= " bg-[#eef0f4] w-full py-10 sm:py-12 md:py-16 lg:py-24 px-4 sm:px-6 md:px-8 bg-white">
-            <div className="max-w-4xl mx-auto text-center">
+        <div className= " bg-[#eef0f4]  w-full py-10 sm:py-12 md:py-16 lg:py-24 px-4 sm:px-6 md:px-8">
+            <div className="max-w-4xl mx-auto text-center bg-[#eef0f4]">
                
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+                <h2 className="bg-[#eef0f4] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
                     Become A Sponsor
                 </h2>
                
