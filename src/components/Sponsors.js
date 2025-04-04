@@ -79,7 +79,15 @@ const Sponsors = () => {
               prevEl: '.swiper-button-prev',
             }}
             pagination={{ clickable: true }}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true
+            }}
+            speed={3000}
+            loop={true}
+            allowTouchMove={false}
+            cssMode={false}
             className="sponsors-swiper"
           >
             {sponsors.map((sponsor, index) => (
@@ -134,8 +142,15 @@ const Sponsors = () => {
             modules={[Autoplay]}
             spaceBetween={30}
             slidesPerView={getSlidesPerView()}
-            autoplay={{ delay: 2500, disableOnInteraction: false, reverseDirection: true }}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+              reverseDirection: true
+            }}
+            speed={4000}
             loop={true}
+            allowTouchMove={false}
+            cssMode={false}
           >
             {sponsors.map((sponsor, index) => (
               <SwiperSlide key={index}>
