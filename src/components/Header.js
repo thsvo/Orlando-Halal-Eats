@@ -47,9 +47,9 @@ export default function Example() {
             <span className="sr-only">Your Company</span>
             <Image
               alt=""
-              src="/Masjid.svg"
+              src="/Halal.PNG"
               width={60}
-              height={60}
+              height={40}
               className="h-15 w-auto"
             />
           </a>
@@ -124,9 +124,9 @@ export default function Example() {
             <span className="sr-only">Your Company</span>
             <Image
               alt=""
-              src="/Halal.PNG"
+              src="/Masjid.svg"
               width={60}
-              height={60}
+              height={40}
               className="h-15 w-auto"
             />
           </a>
