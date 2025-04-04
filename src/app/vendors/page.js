@@ -41,7 +41,7 @@ export default function Vendor() {
                         <ul className="space-y-2">
                             <li className="flex items-start">
                                 <span className="text-green-600 mr-2">✓</span>
-                                <span>10'x10' booth space</span>
+                                <span>10&apos;x10&apos; booth space</span>
                             </li>
                             <li className="flex items-start">
                                 <span className="text-green-600 mr-2">✓</span>
@@ -81,9 +81,9 @@ export default function Vendor() {
                     <h2 className="text-4xl font-bold mb-8">Become A Vendor</h2>
                     <p className="text-lg mb-8 leading-relaxed">
                         Join our incredible lineup of diverse vendors at the Florida Halal Festival and
-                        make a lasting impact on our community. As a vendor, you'll have the
+                        make a lasting impact on our community. As a vendor, you&apos;ll have the
                         opportunity to showcase your products, connect with a vibrant audience, and be
-                        part of an event that celebrates and unites cultures. Don't miss your chance to
+                        part of an event that celebrates and unites cultures. Don&apos;t miss your chance to
                         be at the heart of this exciting festival—sign up today and elevate your business
                         to new heights! If you have any questions please email us
                     </p>
