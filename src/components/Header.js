@@ -116,8 +116,8 @@ export default function Example() {
           <Link href="/sponsors" className="text-sm/6 font-semibold text-gray-900">
             Sponsors
           </Link>
-          <Link href="#" className="text-sm/6 font-semibold text-gray-900">
-            Company
+          <Link href="/vendors" className="text-sm/6 font-semibold text-gray-900">
+          Vendors
           </Link>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -190,12 +190,12 @@ export default function Example() {
                 >
                   Sponsors
                 </a>
-                {/* <a
-                  href="#"
+                <a
+                  href="/vendors"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
-                  Company
-                </a> */}
+                  Vendors
+                </a>
               </div>
               {/* <div className="py-6">
                 <a

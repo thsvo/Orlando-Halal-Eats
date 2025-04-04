@@ -18,10 +18,10 @@ const Cards = () => {
       id: 2,
       title: 'Vendors',
       image: '2.jpg',
-      description: 'Explore food trucks, cultural vendors, and inspiring Islamic art. If you\'d like to be a vendor, click',
+      description: 'Explore food trucks, cultural vendors, and inspiring Islamic art. If you\'d like to be a vendor, click ',
       linkText: 'here',
-      linkUrl: '#',
-      linkSuffix: 'for more information.'
+      linkUrl: 'vendors',
+      linkSuffix: ' for more information.'
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ const Cards = () => {
       image: '3.jpg',
       description: 'Learn more about our incredible sponsors who make this event possible. Interested in joining them? Register',
       linkText: 'here',
-      linkUrl: '#',
+      linkUrl: '/sponsors',
       linkSuffix: '!'
     },
   ];
