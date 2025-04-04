@@ -26,14 +26,24 @@ const Cover = () => {
       }}
     >
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
-        <Box sx={{ color: 'white', textAlign: 'left', ml: 2 }}>
+        <Box 
+          sx={{ 
+            color: 'white', 
+            textAlign: 'left', 
+            ml: { xs: 1, md: 2 },
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            borderRadius: { xs: '10px', md: '16px' },
+            padding: { xs: 1.5, sm: 2, md: 4 },
+            maxWidth: { xs: '85%', sm: '80%', md: '60%' }
+          }}
+        >
           <Typography 
             variant="h1" 
             component="h1" 
             sx={{ 
               fontWeight: 700, 
-              fontSize: { xs: '1.8rem', sm: '2.5rem', md: '4.5rem' },
-              mb: { xs: 1, md: 2 },
+              fontSize: { xs: '1.4rem', sm: '2.5rem', md: '4.5rem' },
+              mb: { xs: 0.5, md: 2 },
               textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
             }}
           >
@@ -43,8 +53,8 @@ const Cover = () => {
           <Typography 
             variant="h5" 
             sx={{ 
-              mb: { xs: 2, md: 4 },
-              fontSize: { xs: '0.9rem', sm: '1.1rem', md: '1.5rem' },
+              mb: { xs: 1, md: 4 },
+              fontSize: { xs: '0.7rem', sm: '1.1rem', md: '1.5rem' },
               textShadow: '1px 1px 3px rgba(0,0,0,0.5)'
             }}
           >
