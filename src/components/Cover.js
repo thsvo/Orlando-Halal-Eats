@@ -47,7 +47,7 @@ const Cover = () => {
               textShadow: '1px 1px 3px rgba(0,0,0,0.5)'
             }}
           >
-            South Florida's First Halal Festival
+           We can’t wait to celebrate with you—join us for a day of great food, exciting entertainment, and unforgettable memories!
           </Typography>
           
           <Button 
