@@ -58,45 +58,45 @@ const Countdown = () => {
         flexDirection: 'column',
         alignItems: 'center',
         position: 'relative',
-        margin: '0 10px',
+        margin: { xs: '0 5px', md: '0 10px' },
       }}
     >
       {/* Balloon */}
       <Box
         sx={{
-          width: '40px',
-          height: '50px',
+          width: { xs: '25px', md: '40px' },
+          height: { xs: '30px', md: '50px' },
           borderRadius: '50%',
           backgroundColor: balloonColor,
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          marginBottom: '10px',
+          marginBottom: { xs: '5px', md: '10px' },
           position: 'relative',
           '&::after': {
             content: '""',
             position: 'absolute',
             bottom: '-10px',
             width: '2px',
-            height: '30px',
+            height: { xs: '20px', md: '30px' },
             backgroundColor: balloonColor,
           },
           '&::before': {
             content: '""',
             position: 'absolute',
-            width: '8px',
-            height: '8px',
+            width: { xs: '5px', md: '8px' },
+            height: { xs: '5px', md: '8px' },
             borderRadius: '50%',
             backgroundColor: 'white',
-            top: '15px',
-            left: '10px',
+            top: { xs: '10px', md: '15px' },
+            left: { xs: '7px', md: '10px' },
           }
         }}
       >
         <Typography
           sx={{
             color: 'white',
-            fontSize: '16px',
+            fontSize: { xs: '12px', md: '16px' },
             fontWeight: 'bold',
           }}
         >
@@ -110,9 +110,9 @@ const Countdown = () => {
         sx={{
           backgroundColor: color,
           borderRadius: '8px',
-          padding: '15px',
-          width: '80px',
-          height: '80px',
+          padding: { xs: '8px', md: '15px' },
+          width: { xs: '50px', md: '80px' },
+          height: { xs: '50px', md: '80px' },
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -126,6 +126,7 @@ const Countdown = () => {
             color: 'white',
             fontWeight: 'bold',
             lineHeight: 1,
+            fontSize: { xs: '1.2rem', sm: '1.5rem', md: '2.5rem' },
           }}
         >
           {String(value).padStart(2, '0')}
@@ -135,7 +136,7 @@ const Countdown = () => {
           sx={{
             color: 'white',
             textTransform: 'uppercase',
-            fontSize: '10px',
+            fontSize: { xs: '8px', md: '10px' },
             letterSpacing: '1px',
           }}
         >
@@ -154,9 +155,8 @@ const Countdown = () => {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          minHeight: '60vh',
-          padding: '40px 0',
-          // Removing the backgroundColor: '#0066c2' line
+          minHeight: { xs: '200px', md: '60vh' },
+          padding: { xs: '20px 0', md: '40px 0' },
           borderRadius: '16px',
           width: '100%',
           backgroundImage: 'url("/Banner.jpg")',
@@ -171,7 +171,7 @@ const Countdown = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: 'rgba(0, 102, 194, 0.85)', // You may want to adjust this opacity
+            backgroundColor: 'rgba(0, 102, 194, 0.85)',
             borderRadius: '16px',
             zIndex: 0,
           },
@@ -182,11 +182,11 @@ const Countdown = () => {
             display: 'flex',
             flexWrap: 'wrap',
             justifyContent: 'center',
-            gap: '10px',
-            marginBottom: '30px',
+            gap: { xs: '5px', md: '10px' },
+            marginBottom: { xs: '15px', md: '30px' },
             width: '100%',
             position: 'relative',
-            zIndex: 1, // Ensure content appears above the overlay
+            zIndex: 1,
           }}
         >
           {timeUnit(timeLeft.days, 'days', '#e63946', '#e63946')}
@@ -201,10 +201,11 @@ const Countdown = () => {
             textAlign: 'center',
             fontWeight: 'bold',
             textTransform: 'uppercase',
-            letterSpacing: '2px',
-            marginTop: '20px',
+            letterSpacing: { xs: '1px', md: '2px' },
+            marginTop: { xs: '10px', md: '20px' },
+            fontSize: { xs: '0.8rem', md: '1.25rem' },
             position: 'relative',
-            zIndex: 1, // Ensure text appears above the overlay
+            zIndex: 1,
           }}
         >
           Countdown to April 5, 2025 14:00:00 EST
